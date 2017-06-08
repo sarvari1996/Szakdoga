@@ -1,0 +1,75 @@
+﻿	.top-buffer { 
+		margin-top:50px; 
+	}
+
+div.gameoptrad {
+		clear: both;
+	}
+
+	label {
+	  width: 200px;
+	  border-radius: 3px;
+	  border: 1px solid #D1D3D4
+	}
+
+	/* hide input */
+	input.gameoptrad:empty {
+		margin-left: -9999px;
+	}
+
+	/* style label */
+	input.gameoptrad:empty ~ label {
+		position: relative;
+		float: left;
+		line-height: 2.5em;
+		text-indent: 3.25em;
+		margin-top: 2em;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	input.gameoptrad:empty ~ label:before {
+		position: absolute;
+		display: block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		content: '';
+		width: 2.5em;
+		background: #D1D3D4;
+		border-radius: 3px 0 0 3px;
+	}
+
+	/* toggle hover */
+	input.gameoptrad:hover:not(:checked) ~ label:before {
+		content:'\2714';
+		text-indent: .9em;
+		color: black;
+	}
+
+	input.gameoptrad:hover:not(:checked) ~ label {
+		color: black;
+		background-color: #4DCB6D;
+	}
+
+	/* toggle on */
+	input.gameoptrad:checked ~ label:before {
+		content:'\2714';
+		text-indent: .9em;
+		color: #9CE2AE;
+		background-color: #4DCB6D;
+	}
+
+	input.gameoptrad:checked ~ label {
+		color: #777;
+	}
+
+	/* radio focus */
+	input.gameoptrad:focus ~ label:before {
+		box-shadow: 0 0 0 3px #999;
+	}
+	
+	
